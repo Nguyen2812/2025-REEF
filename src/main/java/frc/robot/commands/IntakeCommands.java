@@ -10,7 +10,7 @@ public class IntakeCommands extends Command{
 
   public IntakeCommands(Intake intakeSubsystem, double intakespeed) {
     this.intakeSubsystem = intakeSubsystem;
-    this.intakespeed = 1;
+    this.intakespeed = intakespeed;
     addRequirements(intakeSubsystem); 
   }
 

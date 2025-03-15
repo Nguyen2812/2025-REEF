@@ -54,7 +54,7 @@ public class Drive extends SubsystemBase {
   public static final double wheelRadiusMeters = Units.inchesToMeters(2);
   public static final double driveMotorReduction = 
   (50.0 / 14.0) * (17.0 / 27.0) * (45.0 / 15.0);
-  public static final DCMotor driveGearbox = DCMotor.getNEO(1);
+  public static final DCMotor driveGearbox = DCMotor.getNEO(4);
   public static final double maxSpeedMetersPerSec = 4.75;
   public static final Translation2d[] moduleTranslations =
 new Translation2d[] {

@@ -140,9 +140,10 @@ public class RobotContainer {
   private void configureButtonBindings() {
     XboxLmao.y().onTrue(new ClimberPIDCommand(climberSubsystem, 60));
     XboxLmao.a().onTrue(new ClimberPIDCommand(climberSubsystem, 2));
-    XboxLmao.povLeft().onTrue(new InstantCommand(() -> climberSubsystem.resetEncoder()));
-    XboxLmao.povUp().whileTrue(new IntakeCommands(intakeSubsystem, 1));
-    XboxLmao.povDown().whileTrue(new ClimberCommand(climberSubsystem, -1));
+  
+    XboxLmao.povLeft().onTrue(new InstantCommand(() -> intakeSubsystem.resetEncoder()));
+    XboxLmao.povUp().whileTrue(new IntakeCommands(intakeSubsystem, -1));
+    XboxLmao.povDown().whileTrue(new IntakeCommands(intakeSubsystem, 1));
 
     drive.setDefaultCommand(
         DriveCommands.joystickDrive(

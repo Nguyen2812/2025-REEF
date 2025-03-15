@@ -27,7 +27,7 @@ public class Intake extends SubsystemBase {
     IntakeMotor.set(0.5);
 
   }
-  public double getEncoder() {
+  public double getIntakeEncoder() {
     return IntakeEncoder.getPosition();
   }
 
